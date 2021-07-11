@@ -7,11 +7,13 @@ namespace QueueLogic
 {
     public class TaskQueue
     {
-        private Queue<Task> Countainer = new Queue<Task>();
-        private Task MainTask = new Task(RunQueue);
+        private Queue<Task> Countainer;
+        private Task MainTask;
 
-        public QueueLogic()
+        public TaskQueue()
         {
+            Countainer = new Queue<Task>();
+            MainTask = new Task(RunQueue);
             MainTask.Start();
         }
 
